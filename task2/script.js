@@ -20,6 +20,7 @@ document.addEventListener ("click",(e)=>{
     userArr.push (noteNum);
     console.log (userArr);
     console.log (arr);
+    check ();
 
 }
     if (e.target.classList.contains('start')) {
@@ -70,10 +71,25 @@ function play (counter) {
     return arr;
      
 }
-if (arr===userArr) {
-    console.log ('auuff')
+function check (){
+    console.log (arr);
+    console.log (userArr);
+if (arr.length===userArr.length) {
+    let j=0;
+    for (let i=0; i<arr.length; i++){
+        if (arr[i]===userArr[i]){
+            j++;
+        }
+    }
+    if (j===arr.length){
+    console.log ('auuff');
 
     }
+    else {
+        console.log ('no auuuff');
+    }
+}
+}
 
 
 
