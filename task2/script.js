@@ -84,7 +84,7 @@ if (arr.length===userArr.length) {
     if (j===arr.length){
         counter++;
         userArr=[];
-        play (counter);
+        setTimeout (play, 1000, counter);
 
     console.log ('auuff');
 
