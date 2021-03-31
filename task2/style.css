@@ -1,0 +1,74 @@
+
+.page {
+  
+    background-color: wheat;
+ 
+    background-size: cover;
+  
+
+}
+.game{
+    position: relative;
+    top: 25vh;
+    width: 320px;
+    height: 320px;
+    
+    margin: 0 auto;
+}
+.button {
+    position: relative;
+    width:150px;
+    height: 150px;
+    border: solid;
+    border-width: 4px;
+    border-color: black;
+    margin: 2px;
+    cursor: pointer;
+	transition: all 0.7s;
+    
+}
+.button-red {
+    background-color: red;
+    
+}
+.button-blue {
+    background-color: blue;
+    
+}
+.button-green {
+    background-color: green;
+    position: relative; /* Относительное позиционирование */
+    left: 160px;
+    top: -320px;
+}
+.button-yellow {
+    background-color: yellow;
+    position: relative; /* Относительное позиционирование */
+    left: 160px;
+    top: -320px;
+}
+.btn-required {
+    transform: scale (1.2);
+
+    border-color: rgb(226, 163, 27);
+	box-shadow: 0 0 5px  black;
+
+}
+.btn-active {
+	transform: scale (1.2);
+
+    border-color: rgb(16, 180, 43);
+	box-shadow: 0 0 5px  black;
+	
+}
+
+.counter {
+    position: relative;
+    left: 80px;
+    top: -320px;
+
+}
+.start {
+    width: 80px;
+    background-color: green;
+}
