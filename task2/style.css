@@ -8,7 +8,8 @@
 
 }
 .game{
-   
+    position: relative;
+    top: 25vh;
     width: 320px;
     height: 320px;
     
@@ -24,6 +25,7 @@
     border-width: 4px;
     border-color: black;
     margin: 2px;
+    
 }
 .button-red {
     background-color: red;
@@ -44,4 +46,11 @@
     position: relative; /* Относительное позиционирование */
     left: 160px;
     top: -320px;
+}
+
+.counter {
+    position: relative;
+    left: 130px;
+    top: -320px;
+
 }
