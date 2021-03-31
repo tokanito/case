@@ -5,6 +5,8 @@ function removeTransition(e) {
     console.log (e);
     if (e.propertyName !== "border-bottom-color") return;
     e.target.classList.remove("btn-active");
+    e.target.classList.remove("btn-required");
+
 }
 
 document.addEventListener ("click",(e)=>{
@@ -15,31 +17,48 @@ document.addEventListener ("click",(e)=>{
    
     btn.classList.add ("btn-active"); 
 }
+    if (e.target.classList.contains('start')) {
+        play (counter);
+    }
 })
 
 
-let counter = 1;
+let counter = 5;
 const keys = Array.from(document.querySelectorAll(".button"));
 console.log (keys); 
 keys.forEach(button => button.addEventListener("transitionend", removeTransition));
 const start = document.querySelector(".start");
 console.log (start);
 
-start.addEventListener("click", play (counter));
-console.log (counter);
 
 
 
+function task (color){
+    
+        const btn= document.querySelector(`.button[data-note="${color}"]`);
+       
+        btn.classList.add ("btn-required"); 
+
+}
 
 
 function play (counter) {
     let innerCounter = 0;
     let arr=[];
-    if (innerCounter<counter) {
+    while (innerCounter<counter) {
         let num=Math.floor(Math.random()*4);
         arr.push (num);
+        innerCounter++;
         console.log(num);
         console.log (arr);
+    }
+    if (innerCounter===counter) {
+        for (let i=0; i<arr.length; i++){
+            let color =arr[i];
+            
+            setInterval (task, 500, color);
+
+        }
     }
      
 }
