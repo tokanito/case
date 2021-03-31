@@ -24,7 +24,16 @@
     margin: 0 auto 0;
     text-align: center; 
     letter-spacing: normal;
-    margin: 2px;    
+    margin: 1px;    
+}
+.passport-form--option__date{
+  display: inline-block;
+  width: 195px;
+  margin: 0 auto 0;
+  text-align: center; 
+  letter-spacing: normal;
+  margin: 1px;    
+} 
 }
 .address--input {
     margin: 1px; 
