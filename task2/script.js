@@ -40,7 +40,9 @@ function task (color){
         btn.classList.add ("btn-required"); 
 
 }
-
+function timer (color){
+    setTimeout (task, 200, color)
+}
 
 function play (counter) {
     let innerCounter = 0;
@@ -48,17 +50,15 @@ function play (counter) {
     while (innerCounter<counter) {
         let num=Math.floor(Math.random()*4);
         arr.push (num);
+        for (let i=0; i<arr.length; i++){
+            let color =arr[i];
+            
+            setTimeout (timer, 2000, color);
         innerCounter++;
         console.log(num);
         console.log (arr);
     }
-    if (innerCounter===counter) {
-        for (let i=0; i<arr.length; i++){
-            let color =arr[i];
-            
-            setInterval (task, 500, color);
-
-        }
+    
     }
      
 }
