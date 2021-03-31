@@ -31,7 +31,7 @@ document.addEventListener ("click",(e)=>{
 })
 
 
-let counter = 5;
+let counter = 1;
 const keys = Array.from(document.querySelectorAll(".button"));
 
 keys.forEach(button => button.addEventListener("transitionend", removeTransition));
@@ -82,10 +82,16 @@ if (arr.length===userArr.length) {
         }
     }
     if (j===arr.length){
+        counter++;
+        userArr=[];
+        play (counter);
+
     console.log ('auuff');
 
     }
     else {
+        counter=1;
+        userArr=[];
         console.log ('no auuuff');
     }
 }
