@@ -13,8 +13,6 @@
     width: 320px;
     height: 320px;
     
-    background-color: violet;
-    
     margin: 0 auto;
 }
 .button {
@@ -25,6 +23,8 @@
     border-width: 4px;
     border-color: black;
     margin: 2px;
+    cursor: pointer;
+	transition: all 0.3s;
     
 }
 .button-red {
@@ -47,10 +47,28 @@
     left: 160px;
     top: -320px;
 }
+.btn-required {
+    transform: scale (1.2);
+
+    border-color: rgb(226, 163, 27);
+	box-shadow: 0 0 5px  black;
+
+}
+.btn-active {
+	transform: scale (1.2);
+
+    border-color: rgb(16, 180, 43);
+	box-shadow: 0 0 5px  black;
+	
+}
 
 .counter {
     position: relative;
-    left: 130px;
+    left: 80px;
     top: -320px;
 
+}
+.start {
+    width: 80px;
+    background-color: green;
 }
