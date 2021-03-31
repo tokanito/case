@@ -18,24 +18,26 @@ document.addEventListener ("click",(e)=>{
     btn.classList.add ("btn-active"); 
     const noteNum = parseInt (note,10);
     userArr.push (noteNum);
-    console.log (userArr);
-    console.log (arr);
     check ();
 
 }
     if (e.target.classList.contains('start')) {
         play (counter);
-        console.log (arr);
+        score.innerHTML = "Score: 0";
         
     }
 })
 
 
 let counter = 1;
+let max = 0;
 const keys = Array.from(document.querySelectorAll(".button"));
 
 keys.forEach(button => button.addEventListener("transitionend", removeTransition));
 const start = document.querySelector(".start");
+const score = document.querySelector(".score");
+const highest = document.querySelector(".highest");
+
 console.log (start);
 
 function task (color){
@@ -82,9 +84,15 @@ if (arr.length===userArr.length) {
         }
     }
     if (j===arr.length){
+        score.innerHTML = "Score: " + counter;
+        if (counter>max){
+            max= counter;
+            highest.innerHTML = "Highest: " + max;
+        }
         counter++;
         userArr=[];
         setTimeout (play, 1000, counter);
+        
 
     console.log ('auuff');
 
@@ -92,6 +100,7 @@ if (arr.length===userArr.length) {
     else {
         counter=1;
         userArr=[];
+        score.innerHTML = "Game over";
         console.log ('no auuuff');
     }
 }
