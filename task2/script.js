@@ -10,7 +10,7 @@ var arr = [];
 
 var timeDelay=1500;
 const levelChoice =Array.from(document.querySelectorAll(".choice"));
-console.log (levelChoice);
+
 levelChoice.forEach(choice => choice.addEventListener("click", (e)=>{
     const target=e.target;
     if (e.target.id=='1000') {
@@ -20,7 +20,7 @@ levelChoice.forEach(choice => choice.addEventListener("click", (e)=>{
     } else if (e.target.id=='400'){
         timeDelay=400;
     }
-    console.log (timeDelay);
+    
     score.innerHTML = "Score: 0";
     highest.innerHTML = "Highest: 0";
     max = 0;
@@ -28,7 +28,7 @@ levelChoice.forEach(choice => choice.addEventListener("click", (e)=>{
 
 
 }))
-console.log (timeDelay);
+
 
 document.addEventListener ("click",(e)=>{
     const target=e.target;//click on letters
@@ -61,7 +61,7 @@ const start = document.querySelector(".start");
 const score = document.querySelector(".score");
 const highest = document.querySelector(".highest");
 
-console.log (start);
+
 
 function task (color){
     
