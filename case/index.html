@@ -27,7 +27,7 @@
             <p >Дата рождения <input class="feedback--input__date" type="date" name="calendar">
         </form>
         <label>
-            <input class="feedback--input feedback--input__number" type="text" maxlength="11"
+            <input class="feedback--input feedback--input__number" type="text" min="10" max="10""
                    placeholder="Номер телефона" required>
         </label>
         <select class="feedback--input feedback--input__sex" name="sex" id="sex" required>            
@@ -36,17 +36,17 @@
             <option class="form--option form--option__female" value="female"> Женский</option>
             
         </select>
-        <select class="feedback--input feedback--input__group" name="client" id="client" required>
-            <option class="type-form--option type-form--option__client" value="client" hidden selected> Группа клиентов</option>
+        <select class="feedback--input feedback--input__group"  name="client" id="client" required>
+            <option class="type-form--option type-form--option__client" value="false" hidden selected> Группа клиентов</option>
             <option class="type-form--option type-form--option__VIP" value="VIP"> VIP</option>
-            <option class="type-form--option type-form--option__problem" value="problem"> Проблемные</option>
+            <option class="type-form--option type-form--option__problem" value="Проблемные"> Проблемные</option>
             <option class="type-form--option type-form--option__OMC" value="OMC"> ОМС</option>
         </select>
         <select class="feedback--input feedback--input__doctor" name="doctor" id="doctor" required >
             <option class="type-form--option type-form--option__doctor" value="doctor" hidden selected> Лечащий врач</option>
-            <option class="type-form--option type-form--option__doctor1" value="doctor1"> Иванов</option>
-            <option class="type-form--option type-form--option__doctor2" value="doctor2"> Захаров</option>
-            <option class="type-form--option type-form--option__doctor3" value="doctor3"> Чернышева</option>
+            <option class="type-form--option type-form--option__doctor1" value="Иванов"> Иванов</option>
+            <option class="type-form--option type-form--option__doctor2" value="Захаров"> Захаров</option>
+            <option class="type-form--option type-form--option__doctor3" value="Чернышев"> Чернышева</option>
         </select> 
         <label class="feedback--input feedback--input__sms" >Не отправлять СМС
             <input type="checkbox" checked="checked">
@@ -82,12 +82,12 @@
     </form>
     <form  class="passport-form" action="" method="passport">
         <h3>Паспорт</h3>
-        <select class="passport-form" name="currency" id="currency" required>
+        <select class="passport-form passport-form--option__type" name="currency" id="currency" required>
             
-            <option class="passport-form--option passport-form--option__document" value="document"  hidden selected > Тип документа</option>
-            <option class="passport-form--option passport-form--option__passport" value="VIP"> Паспорт</option>
-            <option class="passport-form--option passport-form--option__geburtstag" value="doc-geburtstag"> Свидетельство о рождении</option>
-            <option class="passport-form--option passport-form--option__driver-licence" value="driver-licence"> Вод. удостоверение</option>
+            <option class="passport-form--option passport-form--option__document"  value="false"  hidden selected > Тип документа</option>
+            <option class="passport-form--option passport-form--option__passport" value="Паспорт"> Паспорт</option>
+            <option class="passport-form--option passport-form--option__geburtstag" value="Свидетельство о рождении"> Свидетельство о рождении</option>
+            <option class="passport-form--option passport-form--option__driver-licence" value="Вод. удостоверение"> Вод. удостоверение</option>
         </select>
         <label>
             <input class="passport-form--option passport-form--option-received" type="text" id="received" placeholder="Кем выдан">
