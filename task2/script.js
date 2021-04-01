@@ -14,8 +14,11 @@ document.addEventListener ("click",(e)=>{
     const target=e.target;//click on letters
     if (e.target.classList.contains('button')) {
     const note = e.target.dataset.note;
+    const audio= document.querySelector(`audio[data-note="${note}"]`);
     const btn= document.querySelector(`.button[data-note="${note}"]`);   
     btn.classList.add ("btn-active"); 
+    audio.currentTime = 0;
+    audio.play();
     const noteNum = parseInt (note,10);
     userArr.push (noteNum);
     check ();
@@ -43,8 +46,11 @@ console.log (start);
 function task (color){
     
         const btn= document.querySelector(`.button[data-note="${color}"]`);
+        const audio= document.querySelector(`audio[data-note="${color}"]`);
        
         btn.classList.add ("btn-required");
+        audio.currentTime = 0;
+        audio.play();
          
 
 }
