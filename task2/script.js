@@ -1,6 +1,3 @@
-
-// const btn= document.querySelector(`.button[data_key="${e.keyCode}"]`);
-// if(event.target.classList.contains("piano_key")) {
 function removeTransition(e) {
    
     if (e.propertyName !== "border-bottom-color") return;
@@ -10,6 +7,29 @@ function removeTransition(e) {
 }
 var userArr = []
 var arr = [];
+
+var timeDelay=1500;
+const levelChoice =Array.from(document.querySelectorAll(".choice"));
+console.log (levelChoice);
+levelChoice.forEach(choice => choice.addEventListener("click", (e)=>{
+    const target=e.target;
+    if (e.target.id=='1000') {
+        timeDelay=1000;
+    } else if (e.target.id=='1500'){
+        timeDelay=1500;
+    } else if (e.target.id=='400'){
+        timeDelay=400;
+    }
+    console.log (timeDelay);
+    score.innerHTML = "Score: 0";
+    highest.innerHTML = "Highest: 0";
+    max = 0;
+    counter = 1;
+
+
+}))
+console.log (timeDelay);
+
 document.addEventListener ("click",(e)=>{
     const target=e.target;//click on letters
     if (e.target.classList.contains('button')) {
@@ -51,8 +71,6 @@ function task (color){
         btn.classList.add ("btn-required");
         audio.currentTime = 0;
         audio.play();
-         
-
 }
 function timer (color){
     
@@ -68,20 +86,14 @@ function play (counter) {
         innerCounter++;
         if (innerCounter===counter) {
             for (let i=0; i<arr.length; i++){
-                setTimeout(timer, 1000*i, arr[i]);
-        
-        
+                setTimeout(timer, timeDelay*i, arr[i]);
             }
         }
     }
-    
-    
-    return arr;
-     
+    return arr;     
 }
 function check (){
-    console.log (arr);
-    console.log (userArr);
+   
 if (arr.length===userArr.length) {
     let j=0;
     for (let i=0; i<arr.length; i++){
@@ -98,16 +110,12 @@ if (arr.length===userArr.length) {
         counter++;
         userArr=[];
         setTimeout (play, 1000, counter);
-        
-
-    console.log ('auuff');
-
-    }
+        }
     else {
         counter=1;
         userArr=[];
         score.innerHTML = "Game over";
-        console.log ('no auuuff');
+        
     }
 }
 }
