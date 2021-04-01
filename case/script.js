@@ -9,6 +9,7 @@ const city = document.querySelector ('.address--input__city');
 const documentType = document.querySelector ('.passport-form');
 const documentDate = document.querySelector ('.passport-form--option__date');
 
+
 let arr = [confirmed,lastName,firstName,birth,phoneNumber,group,city,documentType,documentDate]
 for (let i=0; i<arr.length; i++){
     console.log (arr[i]);
@@ -18,9 +19,23 @@ for (let i=0; i<arr.length; i++){
 
 
 
+
 confirmed.addEventListener ('click', function(){
+    const lastName = document.querySelector ('.feedback--input__lastname').value;
+    const firstName = document.querySelector ('.feedback--input__name').value;
+    const birth = document.querySelector ('.feedback--input__date');
+    const phoneNumber = document.querySelector ('.feedback--input__number').value;
+    const group = document.querySelector ('.feedback--input__group');
+    const city = document.querySelector ('.address--input__city').value;
+    const documentType = document.querySelector ('.passport-form');
+    const documentDate = document.querySelector ('.passport-form--option__date');
+
+
     const confirmForm=document.querySelector(".img-confirm");
     confirmForm.innerHTML = "Форма успешно отправлена";
+    var val = document.getElementById('lastname').value;
+    var val1 = document.querySelector ('.feedback--input__lastname').value;
+    console.log (val);
+    console.log (val1);
     
-    console.log (confirmForm);
 })
