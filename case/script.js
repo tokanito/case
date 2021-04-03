@@ -66,7 +66,7 @@
   
 var form = document.querySelector('.formWithValidation')
 var fields = document.querySelectorAll('.field')
-console.log (fields);
+console.log (fields[0]);
 for (var i = 0; i < fields.length; i++) {
     console.log (fields[i]);
 }
