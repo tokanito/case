@@ -14,7 +14,7 @@
             <label>Фамилия:</label>
           </div>
           <div>
-            <input type='text' class='surname field' />
+            <input type='text' class='surname field' required/>
           </div>
         </div>
         <div>
@@ -22,7 +22,7 @@
             <label>Имя:</label>
           </div>
           <div>
-            <input type='text' class='name field' />
+            <input type='text' class='name field' required/>
           </div>
         </div>
         <div>
@@ -30,16 +30,16 @@
             <label>Отчество:</label>
           </div>
           <div>
-            <input type='text' class='third-name field' />
+            <input type='text' class='third-name' />
           </div>
         </div>
-        <p >Дата рождения <input class="feedback--input__date field" type="date" name="calendar">
+        <p >Дата рождения <input class="feedback--input__date field" type="date" name="calendar" required>
         <div>
           <div>
             <label>Номер телефона:</label>
           </div>
           <div>
-            <input type='number' class='from field' />
+            <input type='number' class='from field' required/>
           </div>
         </div>
         <div>
@@ -47,7 +47,7 @@
             <label>Пол</label>
           </div>
           <div>
-            <select class='sex field'>
+            <select class='sex'>
               
               <option  hidden selected></option>
               <option value='mail'>Мужской</option>
@@ -60,7 +60,7 @@
             <label>Группа клиентов</label>
           </div>
           <div>
-            <select class='group field'>
+            <select class='group field' required>
               
               <option  hidden selected></option>
               <option value='vip'>VIP</option>
@@ -75,7 +75,7 @@
             <label>Лечащий врач</label>
           </div>
           <div>
-            <select class='group field'>
+            <select class='group'>
               
               <option  hidden selected></option>
               <option value='num1'>Иванов</option>
@@ -92,7 +92,7 @@
             <label>Индекс:</label>
           </div>
           <div>
-            <input type='text' class='index field' />
+            <input type='text' class='index' />
           </div>
         </div>
         <div>
@@ -100,7 +100,7 @@
             <label>Область:</label>
           </div>
           <div>
-            <input type='text' class='region field' />
+            <input type='text' class='region ' />
           </div>
         </div>
         <div>
@@ -108,7 +108,7 @@
             <label>Улица:</label>
           </div>
           <div>
-            <input type='text' class='street field' />
+            <input type='text' class='street' />
           </div>
         </div>
         <div>
@@ -116,7 +116,7 @@
             <label>Страна:</label>
           </div>
           <div>
-            <input type='text' class='country field' />
+            <input type='text' class='country' />
           </div>
         </div>
         <div>
@@ -124,7 +124,7 @@
             <label>Город:</label>
           </div>
           <div>
-            <input type='text' class='city field' />
+            <input type='text' class='city field' required/>
           </div>
         </div>
         <div>
@@ -132,7 +132,7 @@
             <label>Дом:</label>
           </div>
           <div>
-            <input type='text' class='address field' />
+            <input type='text' class='address' />
           </div>
         </div>
         <h3>Паспорт</h3>
@@ -141,7 +141,7 @@
             <label>Тип документа</label>
           </div>
           <div>
-            <select class='doc field'>
+            <select class='doc field' required>
               
               <option  hidden selected></option>
               <option value='passport'>Паспорт</option>
@@ -156,19 +156,19 @@
             <label>Кем выдан:</label>
           </div>
           <div>
-            <input type='text' class='get-document field' />
+            <input type='text' class='get-document' />
           </div>
         </div>
-        <p >Дата выдачи <input class="passport-form--option field" type="date" name="calendar"> 
+        <p >Дата выдачи <input class="passport-form--option field" type="date" name="calendar" required> 
           <div>
             <label class="feedback--input feedback--input__sms" >Не отправлять СМС
               <input type="checkbox" checked="checked ">
               
           </label>
           </div></br>
-        <input type='submit' class='validateBtn' value='Validate'/>
+        <input type='submit' class='validateBtn' value='Подтвердить'/>
 
-        <h3 class="img-confirm"></h3>
+        <h3 class="confirm"></h3>
       </form>
 
     <script>
@@ -177,6 +177,7 @@
 var form = document.querySelector('.formWithValidation')
 var fields = form.querySelectorAll('.field')
 console.log (fields);
+var confirm = document.querySelector('.confirm')
 
 var removeValidation = function () {
   var errors = form.querySelectorAll('.error')
@@ -186,32 +187,39 @@ var removeValidation = function () {
   }
 }
 
-
+var pattern=/^[а-яА-ЯёЁ ]+$/; 
 function validateUsr(username) {
-    var pattern=/^[а-яА-ЯёЁ ]+$/;    //for name, lastname,city
-    var matchStatus=false;
-        if (username.length>=4  && username.length<=16){
-            matchStatus = pattern.test(username);
-        }
-    console.log (matchStatus);
-    return matchStatus;
+  console.log(username); 
+    if (pattern.test(username)){
+    
+    console.log (true);
+    }else {
+      
+       }
+    return username;
 }
   
 
-    var  example = 'ываыва ';
-    validateUsr(example)  ; 
+    var  example = '1231 ';
+    // validateUsr(example)  ; 
 
     var pattern=/^[а-яА-ЯёЁ ]+$/;   
     var checkFieldsPresence = function () {
     for (var i = 0; i < fields.length; i++) {
         console.log (fields[i].value);
-        if ((!fields[i].value) && (!pattern.test(fields[i].value))) {
+        if (!fields[i].value) {
+
             console.log('field is blank', fields[i])
             var error = document.createElement('div')
             error.className='error'
             error.style.color = 'red'
-            error.innerHTML = 'Cannot be blank'
-            form[i].parentElement.insertBefore(error, fields[i])
+            error.innerHTML = 'Необходимо для заполнения'
+            fields[i].parentElement.insertBefore(error, fields[i])
+        }
+        else {
+          confirm.innerHTML = 'Форма успешно отправлена'
+          console.log (fields[i].value)
+          validateUsr(fields[i].value);
         }
     }
 }
