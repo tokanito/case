@@ -1,77 +1,9 @@
 .page{
-    background-image: url(image.png);
+    background-color: wheat;
     text-align: center;
     background-size: cover;
 }
-.modal{
-    display: inline-block;
-    width: 500px;
-    margin: 0 auto 0;
-    text-align: center;
-    
-}
-h3{
-  
-  margin-top: 10px;
-  
-  margin-bottom: 10px;
-}
-.feedback--input {
-    display: inline-block;
-    width: 300px;
-    margin: 0 auto 0;
-    text-align: center; 
-    letter-spacing: normal;
-    margin: 1px;  
-}
-.feedback--input__date{
-    display: inline-block;
-    width: 195px;
-    margin: 0 auto 0;
-    text-align: center; 
-    letter-spacing: normal;
-    margin: 1px;    
-}
-.passport-form--option__date{
-  display: inline-block;
-  width: 195px;
-  margin: 0 auto 0;
-  text-align: center; 
-  letter-spacing: normal;
-  margin: 1px;    
-} 
-
-.address--input {
-    margin: 1px; 
-}
-.container{
-    display: inline-block;
-    text-align: left; 
-    margin: 2px; 
-}
-input:invalid {
-    border: 2px solid red;
-  }
-  
-  input:invalid:required {
-    background-image: linear-gradient(to right, pink, lightgreen);
-  }
-  
-  input:valid {
-    border: 2px solid black;
-  }
-
-  
-  select:invalid {
-    border: 2px solid red;
-  }
-  select:valid {
-    border: 2px solid black;
-  }
-  select:invalid:required {
-    background-image: linear-gradient(to right, pink, lightgreen);
-  }
-  .img-confirm{
+  .confirm{
 
     background-color: rgb(1, 190, 1);
      

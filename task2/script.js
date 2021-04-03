@@ -47,6 +47,9 @@ document.addEventListener ("click",(e)=>{
     if (e.target.classList.contains('start')) {
         play (counter);
         score.innerHTML = "Score: 0";
+        counter = 1;
+        max = 0;
+        highest.innerHTML = "Highest: 0";
         
     }
 })

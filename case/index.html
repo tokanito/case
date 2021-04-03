@@ -12,90 +12,90 @@
 
 
 <div class="modal modal--feedback">
-    <form class="feedback--form" action="" method="post">
+    <form class="formWithValidation" action="" method="post">
         <h3>Личные данные</h3>
         <label>
-            <input class="feedback--input feedback--input__lastname" type="text" id="last-name" placeholder="Фамилия" required>
+            <input class="feedback--input feedback--input__lastname field" id= "lastname" type="text" id="last-name" placeholder="Фамилия" required>
         </label>
         <label>
-            <input class="feedback--input feedback--input__name" type="text" id="name" placeholder="Имя" required>
+            <input class="feedback--input feedback--input__name field" type="text" id="name" placeholder="Имя" required>
         </label>
         <label>
-            <input class="feedback--input feedback--input__secondname" type="text" id="second-name" placeholder="Отчество">
+            <input class="feedback--input feedback--input__secondname field" type="text" id="second-name" placeholder="Отчество">
         </label>
         <form>
-            <p >Дата рождения <input class="feedback--input__date" type="date" name="calendar">
+            <p >Дата рождения <input class="feedback--input__date field" type="date" name="calendar">
         </form>
         <label>
-            <input class="feedback--input feedback--input__number" type="text" maxlength="11"
+            <input class="feedback--input feedback--input__number field" type="text" min="10" max="10""
                    placeholder="Номер телефона" required>
         </label>
-        <select class="feedback--input feedback--input__sex" name="sex" id="sex" required>            
+        <select class="feedback--input feedback--input__sex field" name="sex" id="sex" required>            
             <option class="form--option form--option__sex" value="sex" hidden selected>Пол </option>
             <option class="form--option form--option__male" value="male"> Мужской </option>            
             <option class="form--option form--option__female" value="female"> Женский</option>
             
         </select>
-        <select class="feedback--input feedback--input__group" name="client" id="client" required>
-            <option class="type-form--option type-form--option__client" value="client" hidden selected> Группа клиентов</option>
+        <select class="feedback--input feedback--input__group field"  name="client" id="client" required>
+            <option class="type-form--option type-form--option__client" value="false" hidden selected> Группа клиентов</option>
             <option class="type-form--option type-form--option__VIP" value="VIP"> VIP</option>
-            <option class="type-form--option type-form--option__problem" value="problem"> Проблемные</option>
+            <option class="type-form--option type-form--option__problem" value="Проблемные"> Проблемные</option>
             <option class="type-form--option type-form--option__OMC" value="OMC"> ОМС</option>
         </select>
-        <select class="feedback--input feedback--input__doctor" name="doctor" id="doctor" required >
+        <select class="feedback--input feedback--input__doctor field" name="doctor" id="doctor" required >
             <option class="type-form--option type-form--option__doctor" value="doctor" hidden selected> Лечащий врач</option>
-            <option class="type-form--option type-form--option__doctor1" value="doctor1"> Иванов</option>
-            <option class="type-form--option type-form--option__doctor2" value="doctor2"> Захаров</option>
-            <option class="type-form--option type-form--option__doctor3" value="doctor3"> Чернышева</option>
+            <option class="type-form--option type-form--option__doctor1" value="Иванов"> Иванов</option>
+            <option class="type-form--option type-form--option__doctor2" value="Захаров"> Захаров</option>
+            <option class="type-form--option type-form--option__doctor3" value="Чернышев"> Чернышева</option>
         </select> 
-        <label class="feedback--input feedback--input__sms" >Не отправлять СМС
+        <label class="feedback--input feedback--input__sms field" >Не отправлять СМС
             <input type="checkbox" checked="checked">
             <span class="checkmark"></span>
         </label>
         
         
-    </form>
-    <form  class="address--form" action="" method="address">
+    
+    
         <h3>Адрес</h3>
         <label>
-            <input class="address--input address--input__index" type="text" id="index" placeholder="Индекс">
+            <input class="address--input address--input__index field" type="text" id="index" placeholder="Индекс">
         </label>
         <label>
-            <input class="address--input address--input__country" type="text" id="country" placeholder="Страна">
+            <input class="address--input address--input__country field" type="text" id="country" placeholder="Страна">
         </label>
         <label>
-            <input class="address--input address--input__region" type="text" id="region" placeholder="Область">
+            <input class="address--input address--input__region field" type="text" id="region" placeholder="Область">
         </label>
         <label>
-            <input class="address--input address--input__city" type="text" id="city" placeholder="Город" required>
+            <input class="address--input address--input__city field field" type="text" id="city" placeholder="Город" required>
         </label>
         <label>
-            <input class="address--input address--input__street" type="text" id="street" placeholder="Улица">
+            <input class="address--input address--input__street field" type="text" id="street" placeholder="Улица">
         </label>
         <label>
-            <input class="address--input address--input__house-number" type="text" id="house-number" placeholder="Дом">
+            <input class="address--input address--input__house-number field" type="text" id="house-number" placeholder="Дом">
         </label>
 
 
 
 
-    </form>
-    <form  class="passport-form" action="" method="passport">
+    
+    
         <h3>Паспорт</h3>
-        <select name="currency" id="currency" required>
+        <select class="passport-form passport-form--option__type field" name="currency" id="currency" required>
             
-            <option class="passport-form--option passport-form--option__document" value="document"  hidden selected > Тип документа</option>
-            <option class="passport-form--option passport-form--option__passport" value="VIP"> Паспорт</option>
-            <option class="passport-form--option passport-form--option__geburtstag" value="doc-geburtstag"> Свидетельство о рождении</option>
-            <option class="passport-form--option passport-form--option__driver-licence" value="driver-licence"> Вод. удостоверение</option>
+            <option class="passport-form--option passport-form--option__document"  value="false"  hidden selected > Тип документа</option>
+            <option class="passport-form--option passport-form--option__passport" value="Паспорт"> Паспорт</option>
+            <option class="passport-form--option passport-form--option__geburtstag" value="Свидетельство о рождении"> Свидетельство о рождении</option>
+            <option class="passport-form--option passport-form--option__driver-licence" value="Вод. удостоверение"> Вод. удостоверение</option>
         </select>
         <label>
-            <input class="passport-form--option passport-form--option-received" type="text" id="received" placeholder="Кем выдан">
+            <input class="passport-form--option passport-form--option-received field" type="text" id="received" placeholder="Кем выдан">
         </label>
         <form>
-            <p>Дата выдачи <input class="passport-form--option__date" type="date" name="calendar-received" required>
+            <p>Дата выдачи <input class="passport-form--option__date field field" type="date" name="calendar-received" required>
         </form>
-        <input class="feedback-btn btn" type="submit" placeholder="Submit">
+        <input type='submit' class='validateBtn' value='Validate'/>
         <h3 class="img-confirm"></h3>
     </form>
 
@@ -109,6 +109,66 @@
 
 
 
-<script src="script.js"></script>
+<script >
+
+
+var form = document.querySelector('.formWithValidation')
+var fields = document.querySelectorAll('.field')
+console.log (fields);
+
+var removeValidation = function () {
+  var errors = form.querySelectorAll('.error')
+
+  for (var i = 0; i < errors.length; i++) {
+    errors[i].remove()
+  }
+}
+
+
+function validateUsr(username) {
+    var pattern=/^[а-яА-ЯёЁ ]+$/;    //for name, lastname,city
+    var matchStatus=false;
+        if (username.length>=4  && username.length<=16){
+            matchStatus = pattern.test(username);
+        }
+    console.log (matchStatus);
+    return matchStatus;
+}
+  
+
+    var  example = 'ываыва ';
+    validateUsr(example)  ; 
+
+    var pattern=/^[а-яА-ЯёЁ ]+$/;   
+    var checkFieldsPresence = function () {
+    for (var i = 0; i < fields.length; i++) {
+        console.log (fields[i].value);
+        if ((!fields[i].value) && (!pattern.test(fields[i].value))) {
+            console.log('field is blank', fields[i])
+            var error = document.createElement('div')
+            error.className='error'
+            error.style.color = 'red'
+            error.innerHTML = 'Cannot be blank'
+            form[i].parentElement.insertBefore(error, fields[i])
+        }
+    }
+}
+
+
+
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  removeValidation();
+  checkFieldsPresence();
+})
+
+
+
+
+
+
+
+</script>
 </body>
 </html>
