@@ -7,168 +7,170 @@
     
 </head>
 <body class="page">
-
-
-
-
-<div class="modal modal--feedback">
-    <form class="formWithValidation" action="" method="post">
-        <h3>Личные данные</h3>
-        <label>
-            <input class="feedback--input feedback--input__lastname field" id= "lastname" type="text" id="last-name" placeholder="Фамилия" required>
-        </label>
-        <label>
-            <input class="feedback--input feedback--input__name field" type="text" id="name" placeholder="Имя" required>
-        </label>
-        <label>
-            <input class="feedback--input feedback--input__secondname field" type="text" id="second-name" placeholder="Отчество">
-        </label>
-        <form>
-            <p >Дата рождения <input class="feedback--input__date field" type="date" name="calendar">
-        </form>
-        <label>
-            <input class="feedback--input feedback--input__number field" type="text" min="10" max="10""
-                   placeholder="Номер телефона" required>
-        </label>
-        <select class="feedback--input feedback--input__sex field" name="sex" id="sex" required>            
-            <option class="form--option form--option__sex" value="sex" hidden selected>Пол </option>
-            <option class="form--option form--option__male" value="male"> Мужской </option>            
-            <option class="form--option form--option__female" value="female"> Женский</option>
-            
-        </select>
-        <select class="feedback--input feedback--input__group field"  name="client" id="client" required>
-            <option class="type-form--option type-form--option__client" value="false" hidden selected> Группа клиентов</option>
-            <option class="type-form--option type-form--option__VIP" value="VIP"> VIP</option>
-            <option class="type-form--option type-form--option__problem" value="Проблемные"> Проблемные</option>
-            <option class="type-form--option type-form--option__OMC" value="OMC"> ОМС</option>
-        </select>
-        <select class="feedback--input feedback--input__doctor field" name="doctor" id="doctor" required >
-            <option class="type-form--option type-form--option__doctor" value="doctor" hidden selected> Лечащий врач</option>
-            <option class="type-form--option type-form--option__doctor1" value="Иванов"> Иванов</option>
-            <option class="type-form--option type-form--option__doctor2" value="Захаров"> Захаров</option>
-            <option class="type-form--option type-form--option__doctor3" value="Чернышев"> Чернышева</option>
-        </select> 
-        <label class="feedback--input feedback--input__sms field" >Не отправлять СМС
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
+    <form class='formWithValidation field'>
+      <h3>Личные данные</h3>
+        <div>
+          <div>
+            <label>Фамилия:</label>
+          </div>
+          <div>
+            <input type='text' class='surname field' required/>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Имя:</label>
+          </div>
+          <div>
+            <input type='text' class='name field' required/>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Отчество:</label>
+          </div>
+          <div>
+            <input type='text' class='third-name' />
+          </div>
+        </div>
+        <p >Дата рождения <input class="feedback--input__date field" type="date" name="calendar" required>
+        <div>
+          <div>
+            <label>Номер телефона:</label>
+          </div>
+          <div>
+            <input type='number' class='from field' required/>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Пол</label>
+          </div>
+          <div>
+            <select class='sex'>
+              
+              <option  hidden selected></option>
+              <option value='mail'>Мужской</option>
+              <option value='female'>Женский</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Группа клиентов</label>
+          </div>
+          <div>
+            <select class='group field' required>
+              
+              <option  hidden selected></option>
+              <option value='vip'>VIP</option>
+              <option value='problem'>Проблемные</option>
+              <option value='omc'>ОМС</option>
+              
+            </select>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Лечащий врач</label>
+          </div>
+          <div>
+            <select class='group'>
+              
+              <option  hidden selected></option>
+              <option value='num1'>Иванов</option>
+              <option value='num2'>Захаров</option>
+              <option value='num3'>Чернышева</option>
+              
+            </select>
+          </div>
+        </div>
         
-        
-    
-    
         <h3>Адрес</h3>
-        <label>
-            <input class="address--input address--input__index field" type="text" id="index" placeholder="Индекс">
-        </label>
-        <label>
-            <input class="address--input address--input__country field" type="text" id="country" placeholder="Страна">
-        </label>
-        <label>
-            <input class="address--input address--input__region field" type="text" id="region" placeholder="Область">
-        </label>
-        <label>
-            <input class="address--input address--input__city field field" type="text" id="city" placeholder="Город" required>
-        </label>
-        <label>
-            <input class="address--input address--input__street field" type="text" id="street" placeholder="Улица">
-        </label>
-        <label>
-            <input class="address--input address--input__house-number field" type="text" id="house-number" placeholder="Дом">
-        </label>
-
-
-
-
-    
-    
+        <div>
+          <div>
+            <label>Индекс:</label>
+          </div>
+          <div>
+            <input type='text' class='index' />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Область:</label>
+          </div>
+          <div>
+            <input type='text' class='region ' />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Улица:</label>
+          </div>
+          <div>
+            <input type='text' class='street' />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Страна:</label>
+          </div>
+          <div>
+            <input type='text' class='country' />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Город:</label>
+          </div>
+          <div>
+            <input type='text' class='city field' required/>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Дом:</label>
+          </div>
+          <div>
+            <input type='text' class='address' />
+          </div>
+        </div>
         <h3>Паспорт</h3>
-        <select class="passport-form passport-form--option__type field" name="currency" id="currency" required>
-            
-            <option class="passport-form--option passport-form--option__document"  value="false"  hidden selected > Тип документа</option>
-            <option class="passport-form--option passport-form--option__passport" value="Паспорт"> Паспорт</option>
-            <option class="passport-form--option passport-form--option__geburtstag" value="Свидетельство о рождении"> Свидетельство о рождении</option>
-            <option class="passport-form--option passport-form--option__driver-licence" value="Вод. удостоверение"> Вод. удостоверение</option>
-        </select>
-        <label>
-            <input class="passport-form--option passport-form--option-received field" type="text" id="received" placeholder="Кем выдан">
-        </label>
-        <form>
-            <p>Дата выдачи <input class="passport-form--option__date field field" type="date" name="calendar-received" required>
-        </form>
-        <input type='submit' class='validateBtn' value='Validate'/>
-        <h3 class="img-confirm"></h3>
-    </form>
+        <div>
+          <div>
+            <label>Тип документа</label>
+          </div>
+          <div>
+            <select class='doc field' required>
+              
+              <option  hidden selected></option>
+              <option value='passport'>Паспорт</option>
+              <option value='doc-birth'>Свидетельство о рождении</option>
+              <option value='driver-licence'>Вод. удостоверение</option>
+              
+            </select>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label>Кем выдан:</label>
+          </div>
+          <div>
+            <input type='text' class='get-document' />
+          </div>
+        </div>
+        <p >Дата выдачи <input class="passport-form--option field" type="date" name="calendar" required> 
+          <div>
+            <label class="feedback--input feedback--input__sms" >Не отправлять СМС
+              <input type="checkbox" checked="checked ">
+              
+          </label>
+          </div></br>
+        <input type='submit' class='validateBtn' value='Подтвердить'/>
 
-        
-        
-        
-</div>
+        <h3 class="confirm"></h3>
+      </form>
 
-
-
-
-
-
-<script >
-
-
-var form = document.querySelector('.formWithValidation')
-var fields = document.querySelectorAll('.field')
-console.log (fields);
-
-var removeValidation = function () {
-  var errors = form.querySelectorAll('.error')
-
-  for (var i = 0; i < errors.length; i++) {
-    errors[i].remove()
-  }
-}
-
-
-function validateUsr(username) {
-    var pattern=/^[а-яА-ЯёЁ ]+$/;    //for name, lastname,city
-    var matchStatus=false;
-        if (username.length>=4  && username.length<=16){
-            matchStatus = pattern.test(username);
-        }
-    console.log (matchStatus);
-    return matchStatus;
-}
-  
-
-    var  example = 'ываыва ';
-    validateUsr(example)  ; 
-
-    var pattern=/^[а-яА-ЯёЁ ]+$/;   
-    var checkFieldsPresence = function () {
-    for (var i = 0; i < fields.length; i++) {
-        console.log (fields[i].value);
-        if ((!fields[i].value) && (!pattern.test(fields[i].value))) {
-            console.log('field is blank', fields[i])
-            var error = document.createElement('div')
-            error.className='error'
-            error.style.color = 'red'
-            error.innerHTML = 'Cannot be blank'
-            form[i].parentElement.insertBefore(error, fields[i])
-        }
-    }
-}
-
-
-
-
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  removeValidation();
-  checkFieldsPresence();
-})
-
-
-
-
-
-
-
-</script>
+    <script> src="script.js" </script>
 </body>
 </html>
