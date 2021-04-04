@@ -7,170 +7,174 @@
     
 </head>
 <body class="page">
-    <form class='formWithValidation field'>
-      <h3>Личные данные</h3>
+  <form class='formWithValidation field'>
+    <h3>Личные данные</h3>
+      <div>
         <div>
-          <div>
-            <label>Фамилия:</label>
-          </div>
-          <div>
-            <input type='text' class='surname field' required/>
-          </div>
+          <label>Фамилия:</label>
         </div>
         <div>
-          <div>
-            <label>Имя:</label>
-          </div>
-          <div>
-            <input type='text' class='name field' required/>
-          </div>
+          <input type='text' class='surname field' required/>
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>Имя:</label>
         </div>
         <div>
-          <div>
-            <label>Отчество:</label>
-          </div>
-          <div>
-            <input type='text' class='third-name' />
-          </div>
+          <input type='text' class='name field' required/>
         </div>
-        <p >Дата рождения <input class="feedback--input__date field" type="date" name="calendar" required>
+      </div>
+      <div>
         <div>
-          <div>
-            <label>Номер телефона:</label>
-          </div>
-          <div>
-            <input type='number' class='from field' required/>
-          </div>
+          <label>Отчество:</label>
         </div>
         <div>
-          <div>
-            <label>Пол</label>
-          </div>
-          <div>
-            <select class='sex'>
-              
-              <option  hidden selected></option>
-              <option value='mail'>Мужской</option>
-              <option value='female'>Женский</option>
-            </select>
-          </div>
+          <input type='text' class='third-name' />
+        </div>
+      </div>
+      <p >Дата рождения <input class="feedback--input__date field" type="date" name="calendar" required>
+      <div>
+        <div>
+          <label>Номер телефона:</label>
         </div>
         <div>
-          <div>
-            <label>Группа клиентов</label>
-          </div>
-          <div>
-            <select class='group field' required>
-              
-              <option  hidden selected></option>
-              <option value='vip'>VIP</option>
-              <option value='problem'>Проблемные</option>
-              <option value='omc'>ОМС</option>
-              
-            </select>
-          </div>
+          <input type='number' class='from field' required/>
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>Пол</label>
         </div>
         <div>
-          <div>
-            <label>Лечащий врач</label>
-          </div>
-          <div>
-            <select class='group'>
-              
-              <option  hidden selected></option>
-              <option value='num1'>Иванов</option>
-              <option value='num2'>Захаров</option>
-              <option value='num3'>Чернышева</option>
-              
-            </select>
-          </div>
+          <select class='sex'>
+            
+            <option  hidden selected></option>
+            <option value='mail'>Мужской</option>
+            <option value='female'>Женский</option>
+          </select>
         </div>
-        
-        <h3>Адрес</h3>
+      </div>
+      <div>
         <div>
-          <div>
-            <label>Индекс:</label>
-          </div>
-          <div>
-            <input type='text' class='index' />
-          </div>
+          <label>Группа клиентов</label>
         </div>
         <div>
-          <div>
-            <label>Область:</label>
-          </div>
-          <div>
-            <input type='text' class='region ' />
-          </div>
+          <select class='group field' required>
+            
+            <option  hidden selected></option>
+            <option value='vip'>VIP</option>
+            <option value='problem'>Проблемные</option>
+            <option value='omc'>ОМС</option>
+            
+          </select>
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>Лечащий врач</label>
         </div>
         <div>
-          <div>
-            <label>Улица:</label>
-          </div>
-          <div>
-            <input type='text' class='street' />
-          </div>
+          <select class='group'>
+            
+            <option  hidden selected></option>
+            <option value='num1'>Иванов</option>
+            <option value='num2'>Захаров</option>
+            <option value='num3'>Чернышева</option>
+            
+          </select>
+        </div>
+      </div>
+      
+      <h3>Адрес</h3>
+      <div>
+        <div>
+          <label>Индекс:</label>
         </div>
         <div>
-          <div>
-            <label>Страна:</label>
-          </div>
-          <div>
-            <input type='text' class='country' />
-          </div>
+          <input type='text' class='index' />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>Область:</label>
         </div>
         <div>
-          <div>
-            <label>Город:</label>
-          </div>
-          <div>
-            <input type='text' class='city field' required/>
-          </div>
+          <input type='text' class='region ' />
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>Улица:</label>
         </div>
         <div>
-          <div>
-            <label>Дом:</label>
-          </div>
-          <div>
-            <input type='text' class='address' />
-          </div>
+          <input type='text' class='street' />
         </div>
-        <h3>Паспорт</h3>
+      </div>
+      <div>
         <div>
-          <div>
-            <label>Тип документа</label>
-          </div>
-          <div>
-            <select class='doc field' required>
-              
-              <option  hidden selected></option>
-              <option value='passport'>Паспорт</option>
-              <option value='doc-birth'>Свидетельство о рождении</option>
-              <option value='driver-licence'>Вод. удостоверение</option>
-              
-            </select>
-          </div>
+          <label>Страна:</label>
         </div>
         <div>
-          <div>
-            <label>Кем выдан:</label>
-          </div>
-          <div>
-            <input type='text' class='get-document' />
-          </div>
+          <input type='text' class='country' />
         </div>
-        <p >Дата выдачи <input class="passport-form--option field" type="date" name="calendar" required> 
-          <div>
-            <label class="feedback--input feedback--input__sms" >Не отправлять СМС
-              <input type="checkbox" checked="checked ">
-              
-          </label>
-          </div></br>
-        <input type='submit' class='validateBtn' value='Подтвердить'/>
+      </div>
+      <div>
+        <div>
+          <label>Город:</label>
+        </div>
+        <div>
+          <input type='text' class='city field' required/>
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>Дом:</label>
+        </div>
+        <div>
+          <input type='text' class='address' />
+        </div>
+      </div>
+      <h3>Паспорт</h3>
+      <div>
+        <div>
+          <label>Тип документа</label>
+        </div>
+        <div>
+          <select class='doc field' required>
+            
+            <option  hidden selected></option>
+            <option value='passport'>Паспорт</option>
+            <option value='doc-birth'>Свидетельство о рождении</option>
+            <option value='driver-licence'>Вод. удостоверение</option>
+            
+          </select>
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>Кем выдан:</label>
+        </div>
+        <div>
+          <input type='text' class='get-document' />
+        </div>
+      </div>
+      <p >Дата выдачи <input class="passport-form--option field" type="date" name="calendar" required> 
+        <div>
+          <label class="feedback--input feedback--input__sms" >Не отправлять СМС
+            <input type="checkbox" checked="checked ">
+            
+        </label>
+        </div></br>
+      <input type='submit' class='validateBtn' value='Подтвердить'/>
 
-        <h3 class="confirm"></h3>
-      </form>
+      <h3 class="confirm"></h3>
+    </form>
 
-    <script> src="script.js" </script>
+  
+    
+            
+   
+    <script src='script.js'></script>
 </body>
 </html>
